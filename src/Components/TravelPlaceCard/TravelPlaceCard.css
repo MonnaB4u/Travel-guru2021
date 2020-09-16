@@ -1,0 +1,10 @@
+.travelPlace{
+    position: relative;
+    top: -20%;
+    left: 5%;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.travel-card{
+    cursor: pointer;
+}

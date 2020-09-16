@@ -1,0 +1,42 @@
+.logo img{
+    height: 50px;
+}
+.nav-item{
+    color: #fff;
+    margin-right: 15px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+.nav-item:hover{
+    color: rgb(195, 195, 195);
+}
+.search-form{
+    background-color: #7e7e7e6b;
+    color: #fff;
+    border-radius: 10px;
+    border: 1px solid gray;
+    padding: 6px 20px;
+}
+.input-field{
+    background: none;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-weight: bold;
+}
+.input-field::placeholder{
+    color: #fff;
+}
+.login{
+    background-color: #F99D04;
+    border: 2px solid #F99D04;
+    padding: 6px 20px;
+    color: black;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: 0.5s all;
+}
+.login:hover{
+    background: none;
+    color: #fff;
+}
