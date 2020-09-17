@@ -1,0 +1,91 @@
+.user-account{
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 6px;
+}
+.user-form h3{
+    color: rgb(85, 84, 84);
+}
+.user-form .input-field{
+    display: block;
+    width: 100%;
+    margin: 10px 0px;
+    padding: 5px 10px;
+    background: none;
+    border: none;
+    color: rgb(85, 84, 84);
+    font-weight: 500;
+    border-bottom: 2px solid #cdcdcd;
+}
+.user-form .input-field:focus{
+    outline: none;
+}
+.user-form .input-field::placeholder{
+    color: rgb(85, 84, 84);
+}
+.submit-btn{
+    background-color: #F99D04 !important;
+    border: 2px solid #F99D04 !important;
+    padding: 6px 20px;
+    color: black!important;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.5s all;
+}
+.submit-btn:hover{
+    background: none !important;
+    color: #000!important;
+}
+.user-form p{
+    color: black;
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+}
+.user-form p span{
+    color: #F99D04;
+    cursor: pointer;
+}
+.check{
+    color: black;
+}
+.check label{
+    margin-left: 10px;
+}
+.forgat-password p{
+    color: #F99D04;
+    cursor: pointer;
+    font-weight: bold;
+}
+.other-signIn-method .facebook, .google{
+    display: block;
+    width: 100%;
+    padding: 0px 20px;
+    margin-top: 15px;
+    background: none;
+    border-radius: 25px;
+    transition: 0.5s all;
+    border: none;
+    border: 2px solid #cdcdcd;
+    text-align: center;
+}
+.other-signIn-method .facebook:hover, .google:hover{
+    background-color: #F99D04;
+}
+.facebook img{
+    height: 34px;
+    position: relative;
+    left: -4%;
+    margin-top: 3px;
+}
+.google img{
+    height: 33px;
+    position: relative;
+    left: -4%;
+    margin-top: 3px;
+}
+.other-signIn-method button{
+    background: none;
+    border: none;
+    font-weight: bold;
+}

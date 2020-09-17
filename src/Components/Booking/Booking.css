@@ -32,7 +32,7 @@
     font-weight: bold;
     border-radius: 5px;
     transition: 0.5s all;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 .booking-form .booking-btn:hover{
     background: none;

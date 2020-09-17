@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import TravelGuruData from '../../TravelGuruData'
+import PlaceInfoData from '../../TravelGuruData/PlaceInfoData'
 import PlaceDetails from '../PlaceDetails/PlaceDetails';
 import TravelPlaceCard from '../TravelPlaceCard/TravelPlaceCard';
 
-const Home = () => {
+const Home = (props) => {
     // travel place view
-    const sliceTravelPlace = TravelGuruData.slice(0, 4);
+    const sliceTravelPlace = PlaceInfoData.slice(0, 4);
     const [TravelPlace, setTravelPlace] = useState(sliceTravelPlace)
 
     // handle travel place details

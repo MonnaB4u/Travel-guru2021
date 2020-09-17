@@ -1,6 +1,6 @@
 import TravelData from './TravelData';
 
-const TravelGuruData = [ ...TravelData];
+const PlaceInfoData = [ ...TravelData];
 
 
 const shuffle = a => {
@@ -10,6 +10,6 @@ const shuffle = a => {
     }
 }
 
-shuffle(TravelGuruData);
+shuffle(PlaceInfoData);
 
-export default TravelGuruData;
+export default PlaceInfoData;

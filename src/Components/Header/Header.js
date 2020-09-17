@@ -3,17 +3,14 @@ import { Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import logo from '../../images/logo2.png'
 import './Header.css'
-import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import SearchIcon from '@material-ui/icons/Search';
-const useStyles = makeStyles((theme) => ({
-    margin: {
-        margin: theme.spacing(1),
-    },
-}));
-
+import { useContext } from 'react';
+import { userContext } from '../../App';
 const Header = () => {
-    const classes = useStyles();
+    
+    const [loggedInUser, setLoggedInUser] = useContext(userContext)
+
     return (
 
         <section className="header">

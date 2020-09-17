@@ -4,12 +4,13 @@ import './PlaceDetails.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight, faCoffee } from '@fortawesome/free-solid-svg-icons'
 const PlaceDetails = (props) => {
+    const {placeDetails, setPlaceDetails} = props
     const {destination, description, id} = props.placeDetails;
     return (
         <div>
             <h1 className="destination">{destination}</h1> <br/>
             <p>{description}</p>
-            <Link to={`/destination/${id}`}><button className="booking-btn">Booking <FontAwesomeIcon icon={faArrowRight} /></button></Link>
+            <Link to={`/destination/${id}`}><button className="booking-btn mb-3">Booking <FontAwesomeIcon icon={faArrowRight} /></button></Link>
         </div>
     );
 };

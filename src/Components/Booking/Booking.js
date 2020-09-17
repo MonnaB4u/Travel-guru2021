@@ -1,6 +1,6 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
-import TravelGuruData from '../../TravelGuruData'
+import { useHistory, useParams } from 'react-router-dom';
+import PlaceInfoData from '../../TravelGuruData/PlaceInfoData'
 import { useForm } from "react-hook-form";
 import './Booking.css'
 import 'date-fns';
@@ -13,12 +13,13 @@ import {
 } from '@material-ui/pickers';
 const Booking = () => {
     const { placeID } = useParams();
-    const visitePlace = TravelGuruData.find(selectedPlace => selectedPlace.id.toString() === placeID);
+    const visitePlace = PlaceInfoData.find(selectedPlace => selectedPlace.id.toString() === placeID);
 
     // form data
     const { register, handleSubmit, watch, errors } = useForm();
     const onSubmit = data => console.log(data);
 
+    const id = visitePlace.id;
     console.log(watch("example"));
 
     const [selectedDate, setSelectedDate] = React.useState(new Date('2020-09-18T21:11:54'));
@@ -26,6 +27,12 @@ const Booking = () => {
     const handleDateChange = (date) => {
         setSelectedDate(date);
     };
+
+    // handle booking
+    const history = useHistory();
+    const handleBooking = ()=> {
+        history.push('/shipment/'+id)
+    }
     return (
         <>
             <div className="container mt-5 pt-3">
@@ -74,7 +81,7 @@ const Booking = () => {
                                 </div>
                             </MuiPickersUtilsProvider>
                             {errors.exampleRequired && <span>This field is required</span>}
-                            <input className="booking-btn" type="submit" />
+                            <input className="booking-btn" destination={visitePlace.destination} onClick={handleBooking} type="submit" />
                         </form>
                     </div>
                 </div>

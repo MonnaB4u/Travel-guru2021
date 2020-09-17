@@ -3,6 +3,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
+import UserLogin from './Components/UserLogin/UserLogin';
 
 import {
   BrowserRouter as Router,
@@ -11,12 +12,16 @@ import {
   Link
 } from "react-router-dom";
 import Booking from './Components/Booking/Booking';
-export const PlaceContext = createContext();
+import Shipment from './Components/Shipment/Shipment';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import Login from './Components/Login/Login';
+export const userContext = createContext();
+
 function App() {
-  const [defaultSelected, setDefaultSelected] = useState("Cox's Bazar")
+  const [loggedInUser, setLoggedInUser] = useState({})
 
   return (
-    <PlaceContext.Provider value={[defaultSelected, setDefaultSelected]}>
+    <userContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <div className="Travel-guru">
         <Router>
           <Header></Header>
@@ -30,10 +35,19 @@ function App() {
             <Route path="/destination/:placeID">
               <Booking></Booking>
             </Route>
+            <Route path="/login">
+              <UserLogin></UserLogin>
+            </Route>
+            <Route path="/sign">
+              <Login></Login>
+            </Route>
+            <PrivateRoute path="/shipment/:ID">
+              <Shipment></Shipment>
+            </PrivateRoute>
           </Switch>
         </Router>
       </div>
-    </PlaceContext.Provider>
+    </userContext.Provider>
   );
 }
 
