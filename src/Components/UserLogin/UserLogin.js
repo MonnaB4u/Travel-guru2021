@@ -61,7 +61,7 @@ const UserLogin = () => {
                     history.replace(from);
                 })
         }
-        e.preventDefault();
+        // e.preventDefault();
     }
     const handleResponse = (res, redirect) => {
         setUser(res);
@@ -89,12 +89,12 @@ const UserLogin = () => {
         }
 
     }
-  
     const { register, errors, handleSubmit } = useForm();
+
     const onSubmit = data => console.log(data);
     return (
         <>
-            <div className="container">
+            <div className="container mt-5">
                 <div className="row d-flex justify-content-center align-items-center">
                     <div className="col-md-5 user-account m-3">
                         <div className="user-form">
@@ -109,9 +109,9 @@ const UserLogin = () => {
                             <form onSubmit={handleSubmit(onSubmit)}>
                                 {
                                     newUser && <div>
-                                        
-                                        <input className="input-field" type="text" onBlur={handleInput} name="firstName" className="input-field" id="" placeholder="First Name" />
-                                        <input className="input-field" type="text" onBlur={handleInput} name="lastName" id="" placeholder="Last Name" />
+
+                                        <input className="input-field" type="text" onBlur={handleInput} name="firstName" id="" placeholder="First Name" required />
+                                        <input className="input-field" type="text" onBlur={handleInput} name="lastName" id="" placeholder="Last Name" required />
                                         <input className="input-field" type="email" onBlur={handleInput} name="email" id="" placeholder="Email" required />
                                         <input className="input-field" type="password" onBlur={handleInput} name="password" id="" placeholder="Password" required />
                                         <input className="input-field" type="password" onBlur={handleInput} name="confirmPassword" id="" placeholder="Confirm Password" required />
@@ -121,7 +121,6 @@ const UserLogin = () => {
                                 {
                                     !newUser && <div>
                                         <input className="input-field" type="email" onBlur={handleInput} name="email" id="" placeholder="Email" required />
-                                      
                                         <input className="input-field" type="password" onBlur={handleInput} name="password" id="" placeholder="Password" required />
                                         <div className="d-flex justify-content-between">
                                             <div className="check">
@@ -134,7 +133,7 @@ const UserLogin = () => {
                                         </div>
                                     </div>
                                 }
-                                <input type="submit" className="input-field submit-btn" onClick={handleSubmitted} value={newUser ? 'Sign up' : 'Login'} />
+                                <input type="submit" className="input-field submit-btn" onClick={() => handleSubmitted()} value={newUser ? 'Sign up' : 'Login'} />
                                 {
                                     newUser && <p>Already have an account ? <span onClick={() => setNewUser(!newUser)}> Login </span> </p>
                                 }

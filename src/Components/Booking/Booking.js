@@ -35,8 +35,8 @@ const Booking = () => {
     }
     return (
         <>
-            <div className="container">
-                <div className="row justify-content-center">
+            <div className="container mt-5">
+                <div className="row justify-content-center pt-5">
                     <div className="col-md-5">
                         <img src={visitePlace.profile} className="img-fluid w-75 img-thumbnail" alt="" />
                         <h2 className="destination pt-3">{visitePlace.destination}</h2>
