@@ -1,0 +1,15 @@
+.welcome{
+    background-color: #f99b04e5;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: rgb(231, 231, 231);
+}
+.logout button{
+    background-color: #fff;
+    padding: 5px 15px;
+    border-radius: 25px;
+    font-weight: 600;
+}
+.logout button:focus{
+    outline: none;
+}

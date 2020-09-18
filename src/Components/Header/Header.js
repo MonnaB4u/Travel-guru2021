@@ -1,7 +1,7 @@
 import React from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import logo from '../../images/logo2.png'
+import logo from '../../images/Logo.png'
 import './Header.css'
 import Grid from '@material-ui/core/Grid';
 import SearchIcon from '@material-ui/icons/Search';

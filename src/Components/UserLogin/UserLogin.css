@@ -89,3 +89,6 @@
     border: none;
     font-weight: bold;
 }
+.other-signIn-method button:focus{
+    outline: none;
+}

@@ -1,5 +1,7 @@
 import * as firebase from "firebase/app";
 import "firebase/auth";
+import { useContext } from "react";
+import { userContext } from "../../App";
 import firebaseConfig from '../../firebase.config';
 
 export const createLoginFreamwork = () => {
@@ -10,20 +12,17 @@ export const createLoginFreamwork = () => {
 
 // handle with google sign in
 export const handleGoogleSignIn = () => {
+
     const googleProvider = new firebase.auth.GoogleAuthProvider();
     return firebase.auth().signInWithPopup(googleProvider)
         .then(res => {
-            const { displayName, email } = res.user;
-            const signInUser = {
-                isSignIn: true,
-                name: displayName,
-                email: email,
-                success: true
-            }
-            return signInUser;
+         
+            // The signed-in user info.
+            var user = res.user;
+            return user;
         })
         .catch(error => {
-            return(error)
+            return(error);
         })
 }
 

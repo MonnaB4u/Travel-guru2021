@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import PlaceInfoData from '../../TravelGuruData/PlaceInfoData'
 import PlaceDetails from '../PlaceDetails/PlaceDetails';
 import TravelPlaceCard from '../TravelPlaceCard/TravelPlaceCard';
-
+import './Home.css'
 const Home = (props) => {
     // travel place view
     const sliceTravelPlace = PlaceInfoData.slice(0, 4);

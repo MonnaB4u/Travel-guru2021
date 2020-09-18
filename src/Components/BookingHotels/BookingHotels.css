@@ -1,2 +1,7 @@
 .hotels{
+    background-color: rgba(0.5, 0.5, 0.5, 0.4);
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 2px 12px -1px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 2px 12px -1px rgba(255,255,255,1);
+    box-shadow: 0px 2px 12px -1px rgba(255,255,255,1);
 }

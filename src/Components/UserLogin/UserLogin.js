@@ -71,39 +71,25 @@ const UserLogin = () => {
         }
     }
     // handle change input
-    // const handleInput = (event) => {
-    //     let isformValid = true;
-    //     if (event.target.name === "email") {
-    //         isformValid = (/\S+@\S+\.\S+/).test(event.target.value);
-    //     }
-    //     if (event.target.name === "password") {
-    //         const passLength = event.target.value.length > 8;
-    //         const passWord = /\d{1}/.test(event.target.value);
-    //         isformValid = passLength && passWord;
-    //     }
-    //     if (isformValid) {
-    //         const newUserInfo = { ...user };
-    //         newUserInfo[event.target.name] = event.target.value;
-    //         setUser(newUserInfo);
-    //     }
+    let isformValid = true;
 
-    // }
-    const handleBlur = (e) => {
-        let isFieldValid = true;
-        if (e.target.name === 'email') {
-            isFieldValid = /\S+@\S+\.\S+/.test(e.target.value);
+    const handleInput = (event) => {
+        if (event.target.name === "email") {
+            isformValid = (/\S+@\S+\.\S+/).test(event.target.value);
         }
-        if (e.target.name === 'password') {
-            const isPasswordValid = e.target.value.length > 6;
-            const passwordHasNumber = /\d{1}/.test(e.target.value);
-            isFieldValid = isPasswordValid && passwordHasNumber;
+        if (event.target.name === "password") {
+            const passLength = event.target.value.length > 8;
+            const passWord = /\d{1}/.test(event.target.value);
+            isformValid = passLength && passWord;
         }
-        if (isFieldValid) {
+        if (isformValid) {
             const newUserInfo = { ...user };
-            newUserInfo[e.target.name] = e.target.value;
+            newUserInfo[event.target.name] = event.target.value;
             setUser(newUserInfo);
         }
+
     }
+  
     const { register, errors, handleSubmit } = useForm();
     const onSubmit = data => console.log(data);
     return (
@@ -124,18 +110,19 @@ const UserLogin = () => {
                                 {
                                     newUser && <div>
                                         
-                                        <input className="input-field" type="text" onBlur={handleBlur} name="firstName" className="input-field" id="" placeholder="First Name" />
-                                        <input className="input-field" type="text" onBlur={handleBlur} name="lastName" id="" placeholder="Last Name" />
-                                        <input className="input-field" type="email" onBlur={handleBlur} name="email" id="" placeholder="Email" required />
-                                        <input className="input-field" type="password" onBlur={handleBlur} name="password" id="" placeholder="Password" required />
-                                        <input className="input-field" type="password" onBlur={handleBlur} name="confirmPassword" id="" placeholder="Confirm Password" required />
+                                        <input className="input-field" type="text" onBlur={handleInput} name="firstName" className="input-field" id="" placeholder="First Name" />
+                                        <input className="input-field" type="text" onBlur={handleInput} name="lastName" id="" placeholder="Last Name" />
+                                        <input className="input-field" type="email" onBlur={handleInput} name="email" id="" placeholder="Email" required />
+                                        <input className="input-field" type="password" onBlur={handleInput} name="password" id="" placeholder="Password" required />
+                                        <input className="input-field" type="password" onBlur={handleInput} name="confirmPassword" id="" placeholder="Confirm Password" required />
                                     </div>
 
                                 }
                                 {
                                     !newUser && <div>
-                                        <input className="input-field" type="email" onBlur={handleBlur} name="email" id="" placeholder="Email" required />
-                                        <input className="input-field" type="password" onBlur={handleBlur} name="password" id="" placeholder="Password" required />
+                                        <input className="input-field" type="email" onBlur={handleInput} name="email" id="" placeholder="Email" required />
+                                      
+                                        <input className="input-field" type="password" onBlur={handleInput} name="password" id="" placeholder="Password" required />
                                         <div className="d-flex justify-content-between">
                                             <div className="check">
                                                 <input type="checkbox" name="checkBox" id="" />

@@ -14,11 +14,16 @@ import {
 import Booking from './Components/Booking/Booking';
 import Shipment from './Components/Shipment/Shipment';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
-import Login from './Components/Login/Login';
+import Googlemap from './Components/Googlemap/Googlemap';
+import NoMatch from './Components/NoMatch/NoMatch';
 export const userContext = createContext();
 
 function App() {
-  const [loggedInUser, setLoggedInUser] = useState({})
+  const [loggedInUser, setLoggedInUser] = useState({
+    name: "",
+    password: "",
+    email: "",
+  })
 
   return (
     <userContext.Provider value={[loggedInUser, setLoggedInUser]}>
@@ -38,12 +43,12 @@ function App() {
             <Route path="/login">
               <UserLogin></UserLogin>
             </Route>
-            <Route path="/sign">
-              <Login></Login>
-            </Route>
             <PrivateRoute path="/shipment/:ID">
               <Shipment></Shipment>
             </PrivateRoute>
+            <Route path="*">
+              <NoMatch></NoMatch>
+            </Route>
           </Switch>
         </Router>
       </div>
