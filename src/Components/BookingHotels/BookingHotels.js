@@ -1,12 +1,21 @@
 import React from 'react';
+import { useHistory } from 'react-router';
 import './BookingHotels.css'
 const BookingHotels = (props) => {
     console.log(props.hotel)
     const { destination, name, guests, image, origin, bed, bedrooms, bath, cancel, price, oppertunity } = props.hotel;
+
+    const history = useHistory();
+
+    const handlePrice =()=>{
+        history.push("/payment")
+    }
+
     return (
         <>
-            <div className="row m-3 p-3 hotels">
-                <div className="col-md-6">
+            <div onClick={()=>handlePrice()}  className="row m-3 p-3 hotels">
+
+                <div  className="col-md-6">
                     <img src={image} className="w-100  img-thumbnail img-fluid" alt="" />
                 </div>
                 <div className="col-md-6 mt-3">
@@ -23,6 +32,7 @@ const BookingHotels = (props) => {
                         <span>${price}/per-night</span>
                     </div>
                 </div>
+
             </div>
         </>
     );

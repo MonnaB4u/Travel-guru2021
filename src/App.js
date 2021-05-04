@@ -16,6 +16,9 @@ import Shipment from './Components/Shipment/Shipment';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import Googlemap from './Components/Googlemap/Googlemap';
 import NoMatch from './Components/NoMatch/NoMatch';
+import Payment from './Components/Payment/Payment';
+import PaymentComplete from './Components/Payment/PaymentComplete';
+
 export const userContext = createContext();
 
 function App() {
@@ -31,24 +34,35 @@ function App() {
         <Router>
           <Header></Header>
           <Switch>
+
             <Route exact path="/">
               <Home></Home>
             </Route>
+
             <Route path="/home">
               <Home></Home>
             </Route>
+
             <Route path="/destination/:placeID">
               <Booking></Booking>
             </Route>
+
             <Route path="/login">
               <UserLogin></UserLogin>
             </Route>
+
             <PrivateRoute path="/shipment/:ID">
               <Shipment></Shipment>
             </PrivateRoute>
+
+            <Route path="/payment"> <Payment></Payment> </Route>
+            <Route path="/paymentsucess"> <PaymentComplete></PaymentComplete> </Route>
+
+
             <Route path="*">
               <NoMatch></NoMatch>
             </Route>
+
           </Switch>
         </Router>
       </div>

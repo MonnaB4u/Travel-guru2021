@@ -2,7 +2,7 @@
     position: relative;
     top: -20%;
     left: 5%;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     font-weight: bold;
 }
 .travel-card{

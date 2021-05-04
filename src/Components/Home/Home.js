@@ -23,7 +23,7 @@ const Home = (props) => {
                                 <PlaceDetails placeDetails={placeDetails}></PlaceDetails>
                             </div>
                         </div>
-                        <div className="col-md-8">
+                        <div className="col-md-7">
                             <div className="row">
                                 {
                                     TravelPlace.map(travelPlace => <TravelPlaceCard travel={travelPlace} key={TravelPlace.id} viewDetailsHandler={viewDetailsHandler}></TravelPlaceCard>)

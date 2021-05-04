@@ -1,6 +1,7 @@
 .logo img{
     height: 50px;
     filter: contrast(0%) brightness(250%);
+   
 }
 .nav-item{
     color: #fff;

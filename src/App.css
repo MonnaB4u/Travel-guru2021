@@ -2,6 +2,15 @@
   background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.6)),url('images/Image/Rectangle\ 1.png');
     background-size: cover;
     color: #efefef!important;
-    background-attachment: fixed;
-    padding-bottom: 70px;
+    /* background-attachment: fixed;
+    padding-bottom: 70px; */
+    width:100%;
+    height:100hv;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -4;
 } 
