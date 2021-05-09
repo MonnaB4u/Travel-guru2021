@@ -68,6 +68,7 @@ export const createUserWithEmailPassword = (firstName, lastName, email, password
       const name = firstName + " " +lastName;
       newUserInfo.success = true;
       updateUserName(name);
+      updateUserEmail(email);
       window.location.reload();
       return newUserInfo;
     })
@@ -101,7 +102,18 @@ export const signInWithEmailPassword = (email, password) => {
 const updateUserName = name => {
     const user = firebase.auth().currentUser;
     user.updateProfile({
-        displayName: name
+        displayName: name                ///////
+    }).then(function () {
+        console.log("Registration update successfully");
+    }).catch(function (error) {
+       return error;
+    });
+}
+
+const updateUserEmail = email => {
+    const user = firebase.auth().currentUser;
+    user.updateProfile({
+        displayEmail: email              ///////
     }).then(function () {
         console.log("Registration update successfully");
     }).catch(function (error) {

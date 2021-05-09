@@ -18,6 +18,14 @@ import Googlemap from './Components/Googlemap/Googlemap';
 import NoMatch from './Components/NoMatch/NoMatch';
 import Payment from './Components/Payment/Payment';
 import PaymentComplete from './Components/Payment/PaymentComplete';
+import Admin from './Components/Admin/Admin';
+import AddPlace from './Components/Admin/AddPlace/AddPlace';
+import AddHotel from './Components/Admin/AddHotel/AddHotel';
+import WatchfeedBack from './Components/Admin/WatchfeedBack/WatchfeedBack';
+import Feedback from './Components/Admin/FeedBack/Feedback';
+import CunsomersFeedBack from './Components/Admin/CunsomersFeedBack/CunsomersFeedBack';
+import TourMain from './Components/TourGuide/TourMain/TourMain';
+
 
 export const userContext = createContext();
 
@@ -54,10 +62,16 @@ function App() {
             <PrivateRoute path="/shipment/:ID">
               <Shipment></Shipment>
             </PrivateRoute>
-
+            
+            <Route path="/feedback"> <Feedback></Feedback> </Route>
             <Route path="/payment"> <Payment></Payment> </Route>
             <Route path="/paymentsucess"> <PaymentComplete></PaymentComplete> </Route>
-
+             <Route path="/admin"> <Admin></Admin> </Route>
+             <Route path="/addHotel"> <AddHotel></AddHotel> </Route>
+             <Route path="/addPlaces"> <AddPlace></AddPlace>  </Route>
+             <Route path="/customerFeedback"> <WatchfeedBack></WatchfeedBack> </Route>
+              {/* <Route path="/customerFeedback"> <CunsomersFeedBack></CunsomersFeedBack> </Route> */}
+           <Route path="/tourguide"> <TourMain></TourMain> </Route>
 
             <Route path="*">
               <NoMatch></NoMatch>

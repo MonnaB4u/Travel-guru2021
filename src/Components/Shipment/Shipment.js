@@ -7,6 +7,18 @@ import BookingHotels from '../BookingHotels/BookingHotels';
 import Googlemap from '../Googlemap/Googlemap';
 import './Shipment.css'
 const Shipment = (props) => {
+
+    // const addHotel= () =>{
+    //     fetch('http://localhost:5000/Hotel', {
+    //    method: 'POST',
+    //    headers: {'Content-Type': 'application/json'
+       
+    // },
+    // body: JSON.stringify(HotelInfoData)
+    // })
+    // }
+
+
     const [loggedInUser, setLoggedInUser] = useContext(userContext);
     const { ID } = useParams();
     const travelPlace = PlaceInfoData.find(place => place.id.toString() === ID);
@@ -20,6 +32,7 @@ const Shipment = (props) => {
                 <div className="row">
                     <div className="col-md-7">
                         <div className="welcome m-4">
+
                             <h2>Hey, {loggedInUser.displayName}</h2>
                             <h3>Weolcome To {travelPlace.destination}</h3>
                             <p>Here 3 popular hotels are available</p>

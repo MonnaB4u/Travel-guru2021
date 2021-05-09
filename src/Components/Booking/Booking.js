@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect, useState } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
 import PlaceInfoData from '../../TravelGuruData/PlaceInfoData'
 import { useForm } from "react-hook-form";
@@ -11,7 +12,24 @@ import {
     KeyboardTimePicker,
     KeyboardDatePicker,
 } from '@material-ui/pickers';
+
+
+
 const Booking = () => {
+
+    
+
+    // useEffect(() => {
+
+    //     fetch('http://localhost:5000/HotelAll')
+    //         .then(res => res.json())
+    //         .then(data => setPlaceInfoData(data))
+
+    // }, [])
+
+
+    // const [PlaceInfoData, setPlaceInfoData]= useState([])
+
     const { placeID } = useParams();
     const visitePlace = PlaceInfoData.find(selectedPlace => selectedPlace.id.toString() === placeID);
 

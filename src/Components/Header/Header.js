@@ -32,13 +32,12 @@ const Header = () => {
                             </div>
                         </div>
                         <Nav className="ml-auto mr-5">
-                            <Link to="/news" className="nav-item ml-4 text-decoration-none">Weather</Link>
-                            <Link to="/destination" className="nav-item ml-4 text-decoration-none">Tour guide</Link>
+                            <Link to="/tourguide" className="nav-item ml-4 text-decoration-none">Tour guide</Link>
                             <Link to="/blog" className="nav-item ml-4 text-decoration-none">Buy Tickets</Link>
-                            <Link to="/contact" className="nav-item ml-4 text-decoration-none">Feedback</Link>
+                            <Link to="/feedback" className="nav-item ml-4 text-decoration-none">Feedback</Link>
                             <Link to="/contact" className="nav-item ml-4 text-decoration-none">{loggedInUser.name}</Link>
                             <Link to="/login" className="login ml-4 text-decoration-none">Login</Link>
-                            <Link to="/login" className="login ml-4 text-decoration-none">Admin</Link>
+                            <Link to="/admin" className="login ml-4 text-decoration-none">Admin</Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
