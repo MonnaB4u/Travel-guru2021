@@ -20,24 +20,31 @@ const CunsomersFeedBack = () => {
         console.log({data})
 
     return (
-        <>
-            <div className="container mt-5">
-                <div className="row d-flex justify-content-center p-3">
-                    <div className="col-md-5 no-match text-center pb-5">
-                        <h1>this place is awesome</h1>
-                        <h2>{data.email}</h2>
-                        <h2>{data.destinationName}</h2>
-                        <h3>{data.FeedBack}</h3>
-                        <div className="signuture text-right mr-5">
-                            <h6>{data.name}</h6>
+        <div >
+
+        <div className="row ml-3 mt-5">
+            {
+                data.map((each, index) =>
+                    <>
+                        {/* <div className="row d-flex  p-3"> */}
+                        <div className="no-match text-center m-3">
+                           <h4>{each.name}</h4>
+                            <h5>{each.destinationName}</h5>
+                            <p>{each.FeedBack}</p>
+                            <div className="signuture text-right mr-5">
+                            <h5>{each.email}</h5>
+                            </div>
                         </div>
-                    </div>
-                </div>
+                    
 
-            </div>
+                    </>
+                )
+            }
+        </div>
 
-        </>
-    );
+    </div>
+
+);
 };
 
 export default CunsomersFeedBack;
