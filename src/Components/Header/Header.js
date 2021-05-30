@@ -33,7 +33,7 @@ const Header = () => {
                         </div>
                         <Nav className="ml-auto mr-5">
                             <Link to="/tourguide" className="nav-item ml-4 text-decoration-none">Tour guide</Link>
-                            <Link to="/blog" className="nav-item ml-4 text-decoration-none">Buy Tickets</Link>
+                            <Link to="/bookingTransport" className="nav-item ml-4 text-decoration-none">Buy Tickets</Link>
                             <Link to="/feedback" className="nav-item ml-4 text-decoration-none">Feedback</Link>
                             <Link to="/contact" className="nav-item ml-4 text-decoration-none">{loggedInUser.name}</Link>
                             <Link to="/login" className="login ml-4 text-decoration-none">Login</Link>

@@ -15,15 +15,17 @@ const AdminDashBoard = () => {
 
   
     <div className='container mt-4 ml-3'>
- 
     <Nav.Link href="addHotel">
-    Update Hotel info</Nav.Link>  
-   
-    </div>
+    Add New Hotel</Nav.Link>  
+   </div>
     
 
     <div className='container mt-2 ml-3'>
-    <Nav.Link  href="addPlaces">  Update Place info</Nav.Link>  
+    <Nav.Link  href="addPlaces">  Add New Place </Nav.Link>  
+    </div>
+
+    <div className='container mt-2 ml-3'>
+    <Nav.Link href="addtransport"> Add New Transoprt</Nav.Link>  
     </div>
 
     <div className='container mt-2 ml-3'>

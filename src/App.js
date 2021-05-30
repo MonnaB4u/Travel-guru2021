@@ -25,6 +25,8 @@ import WatchfeedBack from './Components/Admin/WatchfeedBack/WatchfeedBack';
 import Feedback from './Components/Admin/FeedBack/Feedback';
 import CunsomersFeedBack from './Components/Admin/CunsomersFeedBack/CunsomersFeedBack';
 import TourMain from './Components/TourGuide/TourMain/TourMain';
+import BookingTransportMian from './Components/BookingTransport/BookingTransportMian/BookingTransportMian';
+import AddTransport from './Components/Admin/AddTransport/AddTransport';
 
 
 export const userContext = createContext();
@@ -62,20 +64,21 @@ function App() {
             <PrivateRoute path="/shipment/:ID">
               <Shipment></Shipment>
             </PrivateRoute>
-            
+
             <Route path="/feedback"> <Feedback></Feedback> </Route>
             <Route path="/payment"> <Payment></Payment> </Route>
             <Route path="/paymentsucess"> <PaymentComplete></PaymentComplete> </Route>
-             <Route path="/admin"> <Admin></Admin> </Route>
-             <Route path="/addHotel"> <AddHotel></AddHotel> </Route>
-             <Route path="/addPlaces"> <AddPlace></AddPlace>  </Route>
-             <Route path="/customerFeedback"> <WatchfeedBack></WatchfeedBack> </Route>
-              {/* <Route path="/customerFeedback"> <CunsomersFeedBack></CunsomersFeedBack> </Route> */}
-           <Route path="/tourguide"> <TourMain></TourMain> </Route>
-
+            <Route path="/admin"> <Admin></Admin> </Route>
+            <Route path="/addHotel"> <AddHotel></AddHotel> </Route>
+            <Route path="/addPlaces"> <AddPlace></AddPlace>  </Route>
+            <Route path="/addtransport"> <AddTransport></AddTransport> </Route>
+            <Route path="/customerFeedback"> <WatchfeedBack></WatchfeedBack> </Route>
+            {/* <Route path="/customerFeedback"> <CunsomersFeedBack></CunsomersFeedBack> </Route> */}
+            <Route path="/tourguide"> <TourMain></TourMain> </Route>
+            <Route path="/bookingTransport"> <BookingTransportMian></BookingTransportMian> </Route>
             <Route path="*">
-              <NoMatch></NoMatch>
-            </Route>
+                <NoMatch></NoMatch>
+              </Route>
 
           </Switch>
         </Router>
