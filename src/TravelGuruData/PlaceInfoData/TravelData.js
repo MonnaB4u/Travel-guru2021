@@ -21,6 +21,14 @@ var TravelData = [{
   "image": "https://i.ibb.co/kKm4Rgb/sundorbon.png",
   "profile": "https://i.ibb.co/PYscqbL/bfa7be922fb74a04bf45a5db4b723418.jpg",
   "description": "The Sundarbans is a mangrove area in the delta formed by the confluence of the Ganges, Brahmaputra and Meghna Rivers in the Bay of Bengal. It spans from the Hooghly River in India's state of West Bengal to the Baleswar River in Bangladesh."
+},
+{
+  "id": 4,
+  "destination": "Bangladesh",
+  "origin": "Taiyuan",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/6/64/Pagodas_of_Taiyuan.jpg",
+  "profile": "https://upload.wikimedia.org/wikipedia/commons/6/64/Pagodas_of_Taiyuan.jpg",
+  "description": "The Sundarbans is a mangrove area in the delta formed by the confluence of the Ganges, Brahmaputra and Meghna Rivers in the Bay of Bengal. It spans from the Hooghly River in India's state of West Bengal to the Baleswar River in Bangladesh."
 }
 ]
 
