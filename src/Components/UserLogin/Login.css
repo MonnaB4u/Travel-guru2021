@@ -1,0 +1,118 @@
+.login{
+    background-image: url();
+}
+.login-form{
+    padding: 20px 30px;
+    width: 40%;
+    border-radius: 30px;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab,black);
+    background-size: 400% 400%;
+	/* animation: gradient 1s ease infinite; */
+  
+}
+
+.formin{
+    padding: 20px 30px;
+    border-radius: 30px;
+    width: 80%;
+    
+}
+
+.button{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;    
+}
+.button:focus{
+    outline: 0;
+}
+.social-login{
+width: 100%;
+padding: 6px 20px;
+font-weight: bold;
+margin-top: 5px;
+border: 2px solid gray;
+text-align: center;
+border-radius: 25px;
+transition: 0.5s all;
+display: block;
+background: linear-gradient(-45deg,  #23a6d5, #23d5ab,black);
+}
+
+.soclogin{
+    width: 40%;
+    padding: 6px 20px;
+    font-weight: bold;
+    margin-top: 15px;
+    border: 2px solid gray;
+    text-align: center;
+    border-radius: 25px;
+    transition: 0.5s all;
+    display: block;
+   
+    background: linear-gradient(-45deg,  #23a6d5, #23d5ab,black);
+    
+}
+.soclogin:hover{
+    transition: 0.9s all;
+    border-radius: 0px 0px 1px 3px;
+    border-radius: 25px;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab,black);
+   
+	
+}
+.social-login:hover{
+    background:none;
+    transition: 0.5s all;
+    border-radius: 0px 0px 1px 3px;
+    border-radius: 25px;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab,black);
+} 
+.center{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+/* .allcolor{
+    color: rgb(34, 14, 14);
+} */
+.buttonextra{
+    background-color: rgb(228, 128, 13);
+    border: 2px;
+    padding: 6px 20px;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: 0.5s;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+.buttonextratwo{
+    background: none;
+    border: 2px;
+    padding: 6px 20px;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: 0.5s;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+.buttonextratwo:hover{
+    box-shadow: 1px 1px 1px 1px black;
+    border: 2px;
+    padding: 6px 20px;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: 0.5s;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+/* .cbox{
+    margin-left: 90px;
+} */

@@ -10,7 +10,7 @@ const PlaceDetails = (props) => {
         <div>
             <h1 className="destination">{destination}</h1> <br/>
             <p>{description}</p>
-            <Link to={`/destination/${id}`}><button className="booking-btn mb-3">Booking <FontAwesomeIcon icon={faArrowRight} /></button></Link>
+            <Link to={`/destination/${id}`}><button className="booking-btn mb-3">Select<FontAwesomeIcon icon={faArrowRight} /></button></Link>
         </div>
     );
 };

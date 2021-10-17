@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { userContext } from '../../App';
 import PlaceInfoData from '../../TravelGuruData/PlaceInfoData'
@@ -8,24 +8,25 @@ import Googlemap from '../Googlemap/Googlemap';
 import './Shipment.css'
 const Shipment = (props) => {
 
-    // const addHotel= () =>{
-    //     fetch('http://localhost:5000/Hotel', {
-    //    method: 'POST',
-    //    headers: {'Content-Type': 'application/json'
-       
-    // },
-    // body: JSON.stringify(HotelInfoData)
-    // })
-    // }
+    // const [data, setData]= useState([])
+    
+
+    // useEffect(() => {
+
+    //     fetch('http://localhost:5000/DestinationAll')
+    //         .then(res => res.json())
+    //         .then(data => setData(data))
+
+    // }, [])
 
 
     const [loggedInUser, setLoggedInUser] = useContext(userContext);
     const { ID } = useParams();
     const travelPlace = PlaceInfoData.find(place => place.id.toString() === ID);
-    const selectedHotel = HotelInfoData.filter(hotel => hotel.destination === travelPlace.destination)
+    const selectedHotel = HotelInfoData.filter(hotel => hotel.id === travelPlace.id)
     const [hotels, setHotels] = useState(selectedHotel);
     console.log(loggedInUser);
-
+    // destination
     return (
         <>
             <div className="container mt-4">
@@ -35,10 +36,10 @@ const Shipment = (props) => {
 
                             <h2>Hey, {loggedInUser.displayName}</h2>
                             <h3>Weolcome To {travelPlace.destination}</h3>
-                            <p>Here 3 popular hotels are available</p>
-                            <div className="logout d-flex justify-content-end">
+                            <p>Here some popular hotels are available</p>
+                            {/* <div className="logout d-flex justify-content-end">
                                 <button onClick={() => setLoggedInUser({})}>Sign out</button>
-                            </div>
+                            </div> */}
                         </div>
                         {
                             hotels.map(hotel => <BookingHotels hotel={hotel}></BookingHotels>)

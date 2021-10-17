@@ -3,7 +3,6 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
-import UserLogin from './Components/UserLogin/UserLogin';
 
 import {
   BrowserRouter as Router,
@@ -27,6 +26,8 @@ import CunsomersFeedBack from './Components/Admin/CunsomersFeedBack/CunsomersFee
 import TourMain from './Components/TourGuide/TourMain/TourMain';
 import BookingTransportMian from './Components/BookingTransport/BookingTransportMian/BookingTransportMian';
 import AddTransport from './Components/Admin/AddTransport/AddTransport';
+import AddTourGuide from './Components/Admin/AddTourGuide/AddTourGuide';
+import Login from './Components/UserLogin/Login';
 
 
 export const userContext = createContext();
@@ -58,15 +59,15 @@ function App() {
             </Route>
 
             <Route path="/login">
-              <UserLogin></UserLogin>
+            <Login></Login>
             </Route>
 
-            <PrivateRoute path="/shipment/:ID">
+            <Route path="/shipment/:ID">
               <Shipment></Shipment>
-            </PrivateRoute>
+            </Route>
 
             <Route path="/feedback"> <Feedback></Feedback> </Route>
-            <Route path="/payment"> <Payment></Payment> </Route>
+            <PrivateRoute path="/payment"> <Payment></Payment> </PrivateRoute>
             <Route path="/paymentsucess"> <PaymentComplete></PaymentComplete> </Route>
             <Route path="/admin"> <Admin></Admin> </Route>
             <Route path="/addHotel"> <AddHotel></AddHotel> </Route>
@@ -76,9 +77,8 @@ function App() {
             {/* <Route path="/customerFeedback"> <CunsomersFeedBack></CunsomersFeedBack> </Route> */}
             <Route path="/tourguide"> <TourMain></TourMain> </Route>
             <Route path="/bookingTransport"> <BookingTransportMian></BookingTransportMian> </Route>
-            <Route path="*">
-                <NoMatch></NoMatch>
-              </Route>
+            <Route path="/addTourGuide" > <AddTourGuide></AddTourGuide> </Route>
+            <Route path="*"> <NoMatch></NoMatch> </Route>
 
           </Switch>
         </Router>

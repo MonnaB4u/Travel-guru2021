@@ -2,7 +2,7 @@ import React from 'react';
 import { useHistory } from 'react-router';
 import './BookingHotels.css'
 const BookingHotels = (props) => {
-    console.log(props.hotel)
+    // console.log(props.hotel)
     const { destination, name, guests, image, origin, bed, bedrooms, bath, cancel, price, oppertunity } = props.hotel;
 
     const history = useHistory();

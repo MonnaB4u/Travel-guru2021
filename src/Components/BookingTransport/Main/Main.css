@@ -32,11 +32,12 @@
     flex: 2;
   }
   .blockk{
-    background-color: #e0e0e0;
+    background-color: #f5dada;
     padding: 1rem;
     margin: 0.5rem;
     border-radius: 0.5rem;
   }
+
 
   .bookingcart{
     background-color: #d6b032;
@@ -60,7 +61,7 @@
     padding: 0.2rem;
     margin: 0.1rem;
     border-radius: 0.5rem;
-    border: 0.1rem #404040 solid;
+    border: 0.1rem #d82c2c solid;
     background-color: #f0c040;
     width: 100%;
     cursor: pointer;
@@ -86,8 +87,9 @@
   .buttonnbadge {
     background-color: #f72f2f;
     border: none;
-    color: #ffffff;
+    color: #180303;
     width: 1.5rem;
+    border-radius: 100px;
   }
 
   

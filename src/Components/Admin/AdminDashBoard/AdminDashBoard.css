@@ -1,0 +1,36 @@
+.dash{
+    border-radius: 5px;
+  
+}
+.dash{
+    transition: all 1.0s ease;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    -webkit-box-shadow: 0px 0px 30px 0px #ee7752, #e73c7e, #23a6d5, #23d5ab;
+    -moz-box-shadow:    0px 0px 30px 0px #ee7752, #e73c7e, #23a6d5, #23d5ab;
+    box-shadow: 2px 0px 10px 1px rgb(245, 241, 234);
+    /* rgba(0, 0, 255, 0.67); */
+}
+/* .dash{
+    background-color: rgb(235, 177, 177);
+    
+} */
+.navs{
+    text-decoration: none;
+    color: white;
+    margin-right: 20px;
+    padding: 5px;
+    
+}
+
+.navs:hover{
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab,black);
+	background-size: 400% 400%;
+	/* animation: gradient 1s ease infinite; */
+    border-radius: 5px;
+}
+.nvcol:hover{
+    color:black;
+    
+}

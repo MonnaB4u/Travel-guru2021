@@ -18,18 +18,18 @@ import {
 const Booking = () => {
 
     
+    const [data, setData]= useState([])
+    
 
-    // useEffect(() => {
+    useEffect(() => {
 
-    //     fetch('http://localhost:5000/HotelAll')
-    //         .then(res => res.json())
-    //         .then(data => setPlaceInfoData(data))
+        fetch('http://localhost:5000/DestinationAll')
+            .then(res => res.json())
+            .then(data => setData(data))
 
-    // }, [])
+    }, [])
 
-
-    // const [PlaceInfoData, setPlaceInfoData]= useState([])
-
+    console.log(data)
     const { placeID } = useParams();
     const visitePlace = PlaceInfoData.find(selectedPlace => selectedPlace.id.toString() === placeID);
 

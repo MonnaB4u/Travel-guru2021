@@ -8,8 +8,6 @@ const TourMain = () => {
             <h5 className="text-center  text-warning mb-5">Our Tour Guide</h5>
             <div className="row">
                 <TourGuide></TourGuide>
-                <TourGuide></TourGuide>
-                <TourGuide></TourGuide>
             </div>
         </div>
     </section>

@@ -16,20 +16,21 @@ const AddPlace = () => {
             body: JSON.stringify(data)
         })
             .then(res => res.json())
-            .then(success => {
-                if (success) {
+            .then(sucess => {
+                if (sucess) {
                     alert("Uploaded successfully");
                 }
             })
-
+            console.log(data.sucess)
+      
     }
 
     return (
         <div className="row">
             <AdminDashBoard></AdminDashBoard>
             <form className="p-5" onSubmit={handleSubmit(onSubmit)}>
-
-            <div className="form-group">
+<h1>Add New Place</h1>
+                <div className="form-group">
                     <input type="text" ref={register({ required: true })} name="id" placeholder="Please seen your db and input an id" className="form-control" />
                     {errors.email && <span className="text-danger">This field is required</span>}
                 </div>
@@ -75,7 +76,7 @@ const AddPlace = () => {
 
                 </div>
                 <div className="form-group text-centet ml-0 mt-5">
-                    <button type="submit" class="btn btn-warning">Send</button>
+                    <button type="submit" class="btn booking-btn">Send</button>
                 </div>
 
             </form>

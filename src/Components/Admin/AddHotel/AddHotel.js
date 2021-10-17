@@ -30,6 +30,7 @@ const AddHotel = () => {
           
           
              <form className="p-5" onSubmit={handleSubmit(onSubmit)}>
+                 <h1>Add New Hotel</h1>
                     <div className="form-group" style={{ minWidth: '10px' }}>
                         <input type="text" ref={register({ required: true })} name="destination" placeholder="Hotel Destination Name" className="form-control" />
                         {errors.name && <span className="text-danger">This field is required</span>}
@@ -106,7 +107,7 @@ const AddHotel = () => {
                     
                         </div>
                         <div className="form-group text-centet ml-0 mt-5">
-                            <button type="submit" class="btn btn-warning">Send</button>
+                            <button type="submit" class="btn booking-btn">Send</button>
                         </div>
 
                 </form>

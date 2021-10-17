@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 
 import { useState } from 'react';
-import Data from '../../../TravelGuruData/Transport/Data';
+// import Data from '../../../TravelGuruData/Transport/Data';
 import HeaderTransport from '../HeaderTransport/HeaderTransport';
 import BookingCart from '../BookingCart/BookingCart';
 import Main from '../Main/Main';
@@ -10,22 +10,18 @@ import '../Main/Main.css'
 
 const BookingTransportMian = () => {
 
+  const [Data, setData] = useState([])
 
-//     const [products, setData] = useState({})
+    useEffect(() => {
 
-//   useEffect(() => {
+        fetch('http://localhost:5000/transportall')
+            .then(res => res.json())
+            .then(data => setData(data))
 
-//     fetch('http://localhost:5000/transportall')
-//       .then(res => res.json())
-//       .then(data => setData(data))
+    }, [])
 
-//   }, [])
-
-
-
-
-    const { products } = Data;
     const [cartItems, setCartItems] = useState([]);
+
     const onAdd = (product) => {
         const exist = cartItems.find((x) => x.id === product.id);
         if (exist) {
@@ -38,6 +34,7 @@ const BookingTransportMian = () => {
             setCartItems([...cartItems, { ...product, qty: 1 }]);
         }
     };
+
     const onRemove = (product) => {
         const exist = cartItems.find((x) => x.id === product.id);
         if (exist.qty === 1) {
@@ -51,14 +48,13 @@ const BookingTransportMian = () => {
         }
     };
 
-
     return (
 
         <div className="container">
             <HeaderTransport countCartItems={cartItems.length}></HeaderTransport>
             <div className="row">       
               <div className="m-4">   </div>
-              <Main products={products} onAdd={onAdd}></Main>
+              <Main products={Data} onAdd={onAdd}></Main>
            
                
               <div  className="m-4">      </div>

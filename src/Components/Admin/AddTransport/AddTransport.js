@@ -30,7 +30,7 @@ const AddTransport = () => {
 
 
             <form className="p-5" onSubmit={handleSubmit(onSubmit)}>
-
+                <h1>Add New Transport</h1>
                 <div className="form-group" style={{ minWidth: '10px' }}>
                     <input type="text" ref={register({ required: true })} name="id" placeholder="Input Id" className="form-control" />
                     {errors.name && <span className="text-danger">This field is required</span>}
@@ -41,20 +41,20 @@ const AddTransport = () => {
                     {errors.name && <span className="text-danger">This field is required</span>}
 
                 </div>
-               < div className="form-group" style={{ minWidth: '10px' }}>
+                < div className="form-group" style={{ minWidth: '10px' }}>
                     <input type="number" ref={register({ required: true })} name="price" placeholder="Input Price" className="form-control" />
                     {errors.name && <span className="text-danger">This field is required</span>}
 
                 </div>
 
                 < div className="form-group" style={{ minWidth: '10px' }}>
-                    <input type="text" ref={register({ required: true })} name="img" placeholder="Input Image Link" className="form-control" />
+                    <input type="text" ref={register({ required: true })} name="image" placeholder="Input Image Link" className="form-control" />
                     {errors.name && <span className="text-danger">This field is required</span>}
 
                 </div>
-               
+
                 <div className="form-group text-centet ml-0 mt-5">
-                    <button type="submit" class="btn btn-warning">Send</button>
+                    <button type="submit" class="btn booking-btn">Send</button>
                 </div>
 
             </form>

@@ -5,20 +5,20 @@ import './FeedBack.css'
 
 const Feedback = () => {
     const { register, handleSubmit, errors } = useForm();
-    
+
     const onSubmit = data => {
 
         fetch('http://localhost:5000/FeedBack', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data),
-            
+
         })
             .then(res => res.json())
             .then(success => {
-                 if (success) {
+                if (success) {
                     alert("Thanks for your FeedBack");
-                 }
+                }
             })
 
     }
@@ -29,7 +29,7 @@ const Feedback = () => {
 
 
             <form className="p-5 justify-content-center " onSubmit={handleSubmit(onSubmit)}>
-
+                <h1>Give Your Feed Back</h1>
                 <div className="form-group" style={{ minWidth: '10px' }}>
                     <input type="text" ref={register({ required: true })} name="name" placeholder="Your Name" className="form-control" />
                     {errors.name && <span className="text-danger">This field is required</span>}
@@ -71,12 +71,12 @@ const Feedback = () => {
 
                 </div>
                 <div className="form-group text-centet ml-0 mt-5">
-                    <button type="submit" class="btn btn-warning">Send</button>
+                    <button type="submit" class="btn booking-btn">Send</button>
                 </div>
 
             </form>
-            </div>
- 
+        </div>
+
     );
 };
 

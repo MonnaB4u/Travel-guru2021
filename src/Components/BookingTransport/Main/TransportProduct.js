@@ -5,12 +5,12 @@ const TransportProduct = (props) => {
 
   const { product, onAdd } = props;
   return (
-    <div>
+    <div className="m-3">
       <img className="small" src={product.image} alt={product.name} />
       <h3>{product.name}</h3>
       <div>${product.price}</div>
       <div>
-        <button className="button" onClick={() => onAdd(product)}>Add To Cart</button>
+        <button className="booking-btn" onClick={() => onAdd(product)}>Add To Cart</button>
       </div>
     </div>
 

@@ -14,9 +14,9 @@ const Header = () => {
     return (
 
         <section className="header">
-            <div className="container">
+            <div>
                 <Navbar bg="" expand="lg">
-                   <Link to="/home"> <Navbar.Brand className="logo"><img src={logo} alt="" /></Navbar.Brand></Link>
+                   <Link to="/home"> <Navbar.Brand className="logo ml-4"><img src={logo} alt="" /></Navbar.Brand></Link>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <div className="col-md-5">
@@ -26,7 +26,7 @@ const Header = () => {
                                         <SearchIcon />
                                     </Grid>
                                     <Grid item>
-                                        <input className="input-field" id="input-with-icon-grid" placeholder="Search your destination" />
+                                        <input className="input-field " id="input-with-icon-grid" placeholder="Search your destination" />
                                     </Grid>
                                 </Grid>
                             </div>
