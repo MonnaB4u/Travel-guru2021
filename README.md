@@ -5,7 +5,7 @@
 ![屏幕截图(144)](https://user-images.githubusercontent.com/67531703/148368660-61997e5d-ad6c-42bf-801c-eb9bce732e81.png)
 ![屏幕截图(145)](https://user-images.githubusercontent.com/67531703/148368670-98eda945-15f0-437e-82be-20d87df28090.png)
 ![屏幕截图(115)](https://user-images.githubusercontent.com/67531703/148368100-1551caf0-fb03-404a-b9fc-5913a63f9ab6.png)
-![屏幕截图(116)](https://user-images.githubusercontent.com/67531703/148368108-d05f8d14-0352-4141-9ca8-429b8162b809.png)
+
 ![屏幕截图(117)](https://user-images.githubusercontent.com/67531703/148368112-453c1630-129a-4949-bfcf-761755beb4c0.png)
 ![屏幕截图(119)](https://user-images.githubusercontent.com/67531703/148368115-35ef9aa4-96f5-4b78-a759-1da23e5019f8.png)
 ![屏幕截图(120)](https://user-images.githubusercontent.com/67531703/148368126-bcafbbe8-67b4-4c72-9965-8b697a3f19d5.png)
